@@ -1,0 +1,11 @@
+<%= render('layouts/errors', :object => @activity) %>
+
+<%= form_for [@entry, @activity] do |f| %>
+  <%= f.label :step %>
+  <%= f.text_field :step %>
+  <%= f.label :calorie %>
+  <%= f.text_field :calorie %>
+  <%= f.label :minute %>
+  <%= f.text_field :minute %>
+  <p><%= f.submit %></p>
+<% end %>
