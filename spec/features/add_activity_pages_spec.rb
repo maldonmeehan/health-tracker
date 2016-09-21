@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "the add an activity process" do
   it "adds an activity" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     entry = FactoryGirl.create(:entry)
     visit entries_path
     click_link "2016-09-21"
@@ -14,6 +16,8 @@ describe "the add an activity process" do
   end
 
   it "gives an error when step is left blank for an activity." do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user, :run_callbacks => false)
     entry = FactoryGirl.create(:entry)
     visit entries_path
     click_link "2016-09-21"
