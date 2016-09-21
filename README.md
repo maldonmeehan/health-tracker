@@ -28,6 +28,7 @@ Below are some potential user stories for a calorie-tracking application. But ag
 * `rake db:create`
 * `rake db:migrate`
 * `rake db:test:prepare`
+* `rake db:seed`
 
 ## Running / Development
 
