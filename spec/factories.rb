@@ -1,5 +1,10 @@
 FactoryGirl.define do
   factory(:activity) do
-    step('')
+    step(7890)
+    calorie(1234)
+    minute(99)
+  end
+  factory(:entry) do
+    day("2016/09/21")
   end
 end
