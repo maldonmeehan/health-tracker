@@ -1,0 +1,6 @@
+<h1>Entries</h1>
+<ul>
+  <% @entries.each do |entry| %>
+  <li><%= link_to entry.day, entries_path(entry) %></li>
+  <% end %>
+</ul>
