@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-21T15:22:15-07:00">2016-09-21T15:22:15-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-21T15:30:22-07:00">2016-09-21T15:30:22-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.48%</span></span>
+    (<span class="covered_percent"><span class="green">90.95%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.15
+         1.19
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>27</b> files in total.
-    <b>191</b> relevant lines. 
-    <span class="green"><b>169</b> lines covered</span> and
-    <span class="red"><b>22</b> lines missed </span>
+    <b>28</b> files in total.
+    <b>199</b> relevant lines. 
+    <span class="green"><b>181</b> lines covered</span> and
+    <span class="red"><b>18</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#669bc90c83cfd0fdae30f5d87d3bf36147627d2f" class="src_link" title="app/controllers/entries_controller.rb">app/controllers/entries_controller.rb</a></td>
-        <td class="red strong">65.52 %</td>
+        <td class="red strong">79.31 %</td>
         <td>50</td>
         <td>29</td>
-        <td>19</td>
-        <td>10</td>
-        <td>1.0</td>
+        <td>23</td>
+        <td>6</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -291,6 +291,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#edfe4f5e38a407f02622a9b95d554f5fb25dacdd" class="src_link" title="spec/features/delete_entry_pages_spec.rb">spec/features/delete_entry_pages_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#6b49dc9ed7114d06c81b4c9c3286d80723078173" class="src_link" title="spec/models/activity_spec.rb">spec/models/activity_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>8</td>
@@ -317,7 +327,7 @@
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>2.1</td>
+        <td>2.3</td>
       </tr>
       
     </tbody>
@@ -669,11 +679,11 @@
         <div class="source_table" id="669bc90c83cfd0fdae30f5d87d3bf36147627d2f">
   <div class="header">
     <h3>app/controllers/entries_controller.rb</h3>
-    <h4><span class="red">65.52 %</span> covered</h4>
+    <h4><span class="red">79.31 %</span> covered</h4>
     <div>
       <b>29</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="green"><b>23</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -692,8 +702,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="3">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="3">
+          <span class="hits">7</span>
           
           <code class="ruby">    @entries = Entry.all</code>
         </li>
@@ -716,8 +726,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="7">
+          <span class="hits">4</span>
           
           <code class="ruby">    @entry = Entry.find(params[:id])</code>
         </li>
@@ -908,26 +918,26 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
           
           <code class="ruby">    @entry = Entry.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
           
           <code class="ruby">    @entry.destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">    flash[:notice] = &quot;Entry successfully deleted!&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
           <code class="ruby">    redirect_to entries_path</code>
         </li>
@@ -2862,6 +2872,90 @@
   </pre>
 </div>
       
+        <div class="source_table" id="edfe4f5e38a407f02622a9b95d554f5fb25dacdd">
+  <div class="header">
+    <h3>spec/features/delete_entry_pages_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;the delete an entry process&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;deltes an entry&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    entry = FactoryGirl.create(:entry)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit entries_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;2016-09-21&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;Delete Entry&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;Entry successfully deleted!&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="6b49dc9ed7114d06c81b4c9c3286d80723078173">
   <div class="header">
     <h3>spec/models/activity_spec.rb</h3>
@@ -3260,14 +3354,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="45">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="45">
+          <span class="hits">11</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="46">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="46">
+          <span class="hits">11</span>
           
           <code class="ruby">      example.run</code>
         </li>
@@ -3416,8 +3510,8 @@
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="71">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="71">
+          <span class="hits">11</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
