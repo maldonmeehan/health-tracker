@@ -1,2 +1,7 @@
 <h1><%= @entry.day %></h1>
+
+<p><%= link_to "Edit Entry", edit_entry_path(@entry) %></p>
+<p><%= link_to "Delete Entry", entry_path(@entry),
+                            :data => {:confirm => "You sure?",
+                              :method => "delete" } %></p>
 <p><%= link_to "Return to Entries", entries_path %></p>
