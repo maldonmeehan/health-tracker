@@ -1,4 +1,10 @@
-<h1>Entries</h1>
+<% content_for(:navbar) do %>
+  <li><a href="/">Home</a></li>
+  <li><%= link_to "Sign In", user_session_path %></li>
+  <li><%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %></li>
+<% end %>
+
+<h2>Entries</h2>
 <ul>
   <% @entries.each do |entry| %>
   <li><%= link_to entry.day, entry_path(entry) %></li>

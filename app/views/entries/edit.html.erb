@@ -1,3 +1,9 @@
-<h1>Edit Entry</h1>
+<% content_for(:navbar) do %>
+  <li><a href="/">Home</a></li>
+  <li><%= link_to "Sign In", user_session_path %></li>
+  <li><%= link_to "Sign Out", destroy_user_session_path, :method => "delete" %></li>
+<% end %>
+
+<h2>Edit Entry</h2>
 
 <%= render "form" %>

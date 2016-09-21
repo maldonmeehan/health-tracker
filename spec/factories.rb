@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :user do
+    
+  end
   factory(:activity) do
     step(7890)
     calorie(1234)
