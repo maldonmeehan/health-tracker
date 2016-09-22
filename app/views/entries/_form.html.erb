@@ -1,6 +1,6 @@
 <%= render "layouts/errors", :object => @entry %>
 
-<%= form_for @entry do |f| %>
+<%= form_for @entry, remote: true do |f| %>
   <%= f.label :day %>
   <%= f.date_field :day %>
   <%= f.submit %>

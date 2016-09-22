@@ -2,11 +2,15 @@ class ActivitiesController < ApplicationController
   def new
     @entry = Entry.find(params[:entry_id])
     @activity = @entry.activities.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
     @entry = Entry.find(params[:entry_id])
-    @activity = @entry.activities.new(activity_params)   
+    @activity = @entry.activities.new(activity_params)
     if @activity.save
       flash[:notice] = "Your activity has been added!"
       redirect_to entry_path(@activity.entry)

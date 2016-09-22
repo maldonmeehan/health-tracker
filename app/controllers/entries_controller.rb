@@ -11,6 +11,10 @@ class EntriesController < ApplicationController
 
   def new
     @entry = Entry.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
@@ -26,6 +30,10 @@ class EntriesController < ApplicationController
 
   def edit
     @entry = Entry.find(params[:id])
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update
