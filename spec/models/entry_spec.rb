@@ -4,4 +4,5 @@ describe Entry do
   it { should validate_presence_of :day }
   it { should belong_to :user }
   it { should have_many :activities }
+  it { should have_many :foods }
 end

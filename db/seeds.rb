@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+#
 # 20.times do | i |
 #   # Generate a user
 #   user = User.new
@@ -14,7 +14,9 @@
 #   user.password_confirmation = "test_password"
 #   user.save!
 #
-#   # entry = Entry.new(day: Faker::Date.between(2.days.ago, Date.today))
-#   #
-#   # activity = Activity.new()
+#   entry = Entry.new(day: Faker::Date.between(2.days.ago, Date.today))
+#
+#
+#
+#   activity = Activity.new()
 # end
