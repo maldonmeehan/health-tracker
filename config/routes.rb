@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources :entries do
     resources :activities
   end
-  
+
   resources :entries do
     resources :foods
   end
+  
 end

@@ -627,6 +627,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/health-tracker/app/models/user.rb": [
@@ -876,6 +877,6 @@
         null
       ]
     },
-    "timestamp": 1474566811
+    "timestamp": 1474575847
   }
 }
