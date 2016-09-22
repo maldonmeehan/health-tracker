@@ -1,6 +1,5 @@
 <h2><%= @entry.day %></h2>
 
-
 <p><%= link_to "Add an Activity", new_entry_activity_path(@entry), id: "new_activity_link", remote: true %></p>
 
 
@@ -20,6 +19,27 @@
   </ul>
 <% else %>
   <p>There are no activities yet!</p>
+<% end %>
+
+<hr>
+<p><%= link_to "Add a Food", new_entry_food_path(@entry), id: "new_food_link", remote: true %></p>
+
+<% if @entry.foods.any? %>
+  <h4>Here are the meals for <%= @entry.day %></h4>
+
+  <ul>
+    <% @entry.foods.each do |food| %>
+      <li>
+        <%= food.item %> |
+        <%= food.calorie %> |
+        <%= food.measurment %> |
+        <%= link_to "Edit Food", edit_entry_food_path(@entry, food), id: "edit_food_link", remote: true %>
+        <%= link_to "Delete Food", entry_food_path(@entry, food), :data => {:confirm => "Are you sure you want to delete this food?", :method => "delete"} %>
+      </li>
+      <% end %>
+  </ul>
+<% else %>
+  <p>There are no foods yet!</p>
 <% end %>
 
 <hr>
