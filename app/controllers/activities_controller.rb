@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @entry = Entry.find(params[:entry_id])
-    @activity = @entry.activities.new(activity_params)
+    @activity = @entry.activities.new(activity_params)   
     if @activity.save
       flash[:notice] = "Your activity has been added!"
       redirect_to entry_path(@activity.entry)
@@ -23,7 +23,7 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    flash[:notice] = "Your activity has been deleted!"    
+    flash[:notice] = "Your activity has been deleted!"
     redirect_to entry_path(@activity.entry)
   end
 

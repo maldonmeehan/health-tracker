@@ -47,6 +47,7 @@ Please contact us with any questions, concerns, or ideas.
 
 * Ruby
 * Rails
+* AJAX
 * PostgreSQL
 * HTML/CSS
 * Bootstrap

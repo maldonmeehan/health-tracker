@@ -4,8 +4,10 @@ describe "the add an activity process" do
   it "adds an activity" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user, :run_callbacks => false)
-    entry = FactoryGirl.create(:entry)
     visit entries_path
+    click_link "New Entry"
+    fill_in "Day", with: '2016/09/21'
+    click_button "Create Entry"
     click_link "2016-09-21"
     click_link 'Add an Activity'
     fill_in "Step", :with => "7890"
@@ -18,8 +20,10 @@ describe "the add an activity process" do
   it "gives an error when step is left blank for an activity." do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user, :run_callbacks => false)
-    entry = FactoryGirl.create(:entry)
     visit entries_path
+    click_link "New Entry"
+    fill_in "Day", with: '2016/09/21'
+    click_button "Create Entry"
     click_link "2016-09-21"
     click_link 'Add an Activity'
     fill_in "Step", :with => ""

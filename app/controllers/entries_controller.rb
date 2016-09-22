@@ -15,6 +15,7 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(entry_params)
+    @entry.user = current_user
     if @entry.save
       flash[:notice] = "Entry successfully added!"
       redirect_to entries_path
