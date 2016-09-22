@@ -22,7 +22,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
-  gem 'faker'
+  gem 'faker', git: 'git@github.com:stympy/faker.git'
   gem 'poltergeist'
   gem 'database_cleaner'
 end
