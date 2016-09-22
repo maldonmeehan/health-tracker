@@ -7,17 +7,19 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <div class="nav">
-    <% if user_signed_in? %>
-    <%= link_to "Logout", destroy_user_session_path, method: 'delete'  %>
-    <% else %>
-    <%= link_to "Login", new_user_session_path  %>
-    <% end %>
-  </div>
-  <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+  <div class="container">
+    <div class="nav">
+      <% if user_signed_in? %>
+      <%= link_to "Logout", destroy_user_session_path, method: 'delete'  %>
+      <% else %>
+      <%= link_to "Login", new_user_session_path  %>
+      <% end %>
+    </div>
+    <body>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
 
-    <%= yield %>
-  </body>
+      <%= yield %>
+    </body>
+  </div>
 </html>

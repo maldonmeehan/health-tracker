@@ -2,10 +2,11 @@
 
 <%= form_for [@entry, @activity], remote: true do |f| %>
   <%= f.label :step %>
-  <%= f.text_field :step %>
+  <%= f.number_field :step, class: "form-control" %>
   <%= f.label :calorie %>
-  <%= f.text_field :calorie %>
+  <%= f.number_field :calorie, class: "form-control" %>
   <%= f.label :minute %>
-  <%= f.text_field :minute %>
+  <%= f.number_field :minute, class: "form-control" %>
+  <br>
   <p><%= f.submit %></p>
 <% end %>
