@@ -1,9 +1,16 @@
 <h2>Entries</h2>
-<ul>
-  <% @entries.each do |entry| %>
-  <li><%= link_to entry.day, entry_path(entry) %></li>
-  <% end %>
-</ul>
+<table>
+  <tr>
+    <th>
+      <%= link_to "Sort Entries", :sort => "day"%>
+    </th>
+  </tr>
+  <tr>
+    <% @entries.each do |entry| %>
+    <li><%= link_to entry.day, entry_path(entry) %></li>
+    <% end %>
+  </tr>
+</table>
 
 <%= link_to "New Entry", new_entry_path, id: "new_entry_link", remote: true %>
 <hr>

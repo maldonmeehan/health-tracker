@@ -3,6 +3,7 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all
+    @entries = Entry.order(params[:sort])
   end
 
   def show
