@@ -2,6 +2,7 @@
 
 <%= form_for @entry, remote: true do |f| %>
   <%= f.label :day %>
-  <%= f.date_field :day %>
-  <%= f.submit %>
+  <%= f.date_field :day, class: "form-control"  %>
+  <br>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>

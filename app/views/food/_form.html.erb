@@ -2,11 +2,11 @@
 
 <%= form_for [@entry, @food], remote: true do |f| %>
   <%= f.label :item %>
-  <%= f.text_field :item %>
+  <%= f.text_field :item, class: "form-control"  %>
   <%= f.label :calorie %>
-  <%= f.number_field :calorie %>
+  <%= f.number_field :calorie, class: "form-control"  %>
   <%= f.label :measurment %>
-  <%= f.text_field :measurment %>
+  <%= f.text_field :measurment, class: "form-control"  %>
   <br>
-  <p><%= f.submit %></p>
+  <p><%= f.submit class: "btn btn-primary" %></p>
 <% end %>
