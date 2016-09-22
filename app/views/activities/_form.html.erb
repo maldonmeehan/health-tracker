@@ -1,6 +1,6 @@
 <%= render('layouts/errors', :object => @activity) %>
 
-<%= form_for [@entry, @activity] do |f| %>
+<%= form_for [@entry, @activity], remote: true do |f| %>
   <%= f.label :step %>
   <%= f.text_field :step %>
   <%= f.label :calorie %>
